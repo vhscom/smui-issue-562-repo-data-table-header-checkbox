@@ -61,3 +61,11 @@
 
 <pre class="status">Selected: {selected.map((option) => option.name).join(', ')}</pre>
 <pre class="status">Total: {selectedPrice}</pre>
+
+<button on:click={() => (selected.length = 0)}>Uncheck all</button>
+<button on:click={() => (selected = [options[0], options[1], options[2], options[3], options[4]])}
+	>Check all</button
+>
+<button on:click={() => (selected = [options[0], options[1], options[2], options[3]])}
+	>Check some</button
+>
