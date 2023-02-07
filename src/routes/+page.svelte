@@ -38,7 +38,13 @@
 	<Head>
 		<Row>
 			<Cell checkbox>
-				<Checkbox />
+				{#if selected.length === 0}
+					<Checkbox />
+				{:else if selected.length > 0 && selected.length < options.length}
+					<Checkbox indeterminate />
+				{:else}
+					<Checkbox checked />
+				{/if}
 			</Cell>
 			<Cell>Name</Cell>
 			<Cell>Description</Cell>
