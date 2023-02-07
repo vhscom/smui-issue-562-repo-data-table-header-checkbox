@@ -38,7 +38,10 @@
 	<Head>
 		<Row>
 			<Cell checkbox>
-				<Checkbox />
+				<!-- FIXME: Wrap Checkbox in key block to workaround svelte-material-ui/issues/562 -->
+				{#key selected}
+					<Checkbox />
+				{/key}
 			</Cell>
 			<Cell>Name</Cell>
 			<Cell>Description</Cell>
